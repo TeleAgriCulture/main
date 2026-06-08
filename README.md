@@ -2,6 +2,11 @@
 
 # TeleAgriCulture Board V2.1
 
+> ⚠️ **This repository is a mirror — updated only occasionally.**
+> The official, preferred and actively maintained release always lives at
+> **<https://github.com/TeleAgriCulture/main>**. Please use that repository for the
+> latest firmware and documentation.
+
 ![TeleAgriCulture Board V2.1](https://gitlab.com/teleagriculture/community/-/raw/main/teleAgriCulture%20Board%20V2.1/Docu/pictures/tac_board_V2_1_02.JPG)
 
 _Picture by Daniel Fischer 2024_
