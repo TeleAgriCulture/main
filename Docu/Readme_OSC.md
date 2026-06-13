@@ -86,7 +86,7 @@ Value:   21.56
 
 ## Example Applications
 
-* Processing
+* Processing see -> processingOSC.pde example
 * TouchDesigner
 * Max/MSP
 * Pure Data
