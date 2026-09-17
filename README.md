@@ -322,7 +322,7 @@ the online [Docu Page](https://gitlab.com/teleagriculture/community/-/tree/main/
 | **[Docu/dev_docu.md](Docu/dev_docu.md)** | Full developer reference: architecture, flags, power management, build config |
 | **[README_credentials.md](README_credentials.md)** | Setting up credentials and building/flashing firmware |
 | **[Docu/calibration_ADS1115.md](Docu/calibration_ADS1115.md)** | Sensor calibration wizard (pH, EC, DO, ORP, soil) |
-| **[Docu/API.md](Docu/API.md)** | Reading your data back out of the TeleAgriCulture API |
+| **[Docu/API.md](Docu/API.md)** | Reading kit data from the TeleAgriCulture API, and sending readings to it |
 | **[Schematic](Docu/Schematic_teleAgriculture_Board_v2.1.pdf)** / **[PCB front](Docu/PCB_teleAgriculture_Board_v2.1_front.pdf)** / **[PCB back](Docu/PCB_teleAgriculture_Board_v2.1_back.pdf)** | Hardware schematic and PCB layout (PDF) |
 
 ---
@@ -401,5 +401,4 @@ Join the community at **https://www.teleagriculture.org** to share your projects
 experiences.
 
 To push data to teleagriculture.org you need a **board ID and API token**. See the
-[API documentation](https://gitlab.com/teleagriculture/community/-/blob/e54ab443139c24a1889cc83034cda92408a1d88b/teleAgriCulture%20Board%20V2.1/Docu/API.md)
-for how to read your data back out.
+[API documentation](Docu/API.md) for how to send readings and read your data back out.
