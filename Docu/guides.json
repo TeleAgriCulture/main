@@ -1,0 +1,72 @@
+{
+  "version": 1,
+  "categories": [
+    {
+      "key": "start",
+      "title": "Getting started",
+      "summary": "From a board in a box to readings on kits.teleagriculture.org."
+    },
+    {
+      "key": "tutorials",
+      "title": "Tutorials",
+      "summary": "Step-by-step projects built with a TeleAgriCulture kit."
+    },
+    {
+      "key": "reference",
+      "title": "Reference",
+      "summary": "Look-up material for when you know what you are after."
+    },
+    {
+      "key": "developers",
+      "title": "For developers",
+      "summary": "Changing the firmware or adding a sensor."
+    }
+  ],
+  "guides": [
+    {
+      "slug": "board-setup",
+      "title": "Set up your board",
+      "summary": "Power the board, put it on WiFi, and connect it to your kit on the website.",
+      "category": "start",
+      "path": "Docu/setup.md",
+      "minutes": 10,
+      "audience": "everyone"
+    },
+    {
+      "slug": "board-guide",
+      "title": "The board, start to finish",
+      "summary": "What the board can do, its modes, firmware updates and troubleshooting.",
+      "category": "start",
+      "path": "README.md",
+      "minutes": 20,
+      "audience": "everyone"
+    },
+    {
+      "slug": "api",
+      "title": "Get your data with the API",
+      "summary": "Download readings from any published kit, or send readings from your own device.",
+      "category": "reference",
+      "path": "Docu/API.md",
+      "minutes": 10,
+      "audience": "everyone"
+    },
+    {
+      "slug": "calibration",
+      "title": "Calibrate your sensors",
+      "summary": "Calibrate the pH, EC, dissolved oxygen, ORP and soil moisture sensors before you rely on their readings.",
+      "category": "reference",
+      "path": "Docu/calibration_ADS1115.md",
+      "minutes": 15,
+      "audience": "everyone"
+    },
+    {
+      "slug": "firmware",
+      "title": "Working on the firmware",
+      "summary": "How the firmware fits together, for adding a sensor or changing what the board does.",
+      "category": "developers",
+      "path": "Docu/dev_docu.md",
+      "minutes": 25,
+      "audience": "developers"
+    }
+  ]
+}
