@@ -1,8 +1,8 @@
-[<img src="https://gitlab.com/teleagriculture/community/-/raw/main/teleAgriCulture%20Board%20V2.1/Docu/pictures/vscode.svg" alt="VS Code logo" width="50" height="50">](https://code.visualstudio.com)   &nbsp;   [<img src="https://cdn.platformio.org/images/platformio-logo-xs.fd6e881d.png" alt="PlatformIO logo" height="50">](https://platformio.org) &nbsp; [<img src="https://gitlab.com/teleagriculture/community/-/raw/main/teleAgriCulture%20Board%20V2.1/Docu/pictures/ESP32-S3.png" alt="ESP32-S3 logo" height="50">](https://www.espressif.com/sites/default/files/documentation/esp32-s3_datasheet_en.pdf)
+[<img src="Docu/pictures/vscode.svg" alt="VS Code logo" width="50" height="50">](https://code.visualstudio.com)   &nbsp;   [<img src="https://cdn.platformio.org/images/platformio-logo-xs.fd6e881d.png" alt="PlatformIO logo" height="50">](https://platformio.org) &nbsp; [<img src="Docu/pictures/ESP32-S3.png" alt="ESP32-S3 logo" height="50">](https://www.espressif.com/sites/default/files/documentation/esp32-s3_datasheet_en.pdf)
 
 # TeleAgriCulture Board V2.1
 
-![TeleAgriCulture Board V2.1](https://gitlab.com/teleagriculture/community/-/raw/main/teleAgriCulture%20Board%20V2.1/Docu/pictures/tac_board_V2_1_02.JPG)
+![TeleAgriCulture Board V2.1](Docu/pictures/tac_board_V2_1_02.JPG)
 
 _Picture by Daniel Fischer 2024_
 
@@ -77,7 +77,7 @@ computer or coding required. (You can later update over the air, see
 
 **You need:** a TeleAgriCulture Board V2.1, a micro-USB cable, and optionally some
 sensors/actuators. A step-by-step guide with pictures is
-[here](https://gitlab.com/teleagriculture/community/-/blob/main/teleAgriCulture%20Board%20V2.1/Docu/setup.md).
+[here](Docu/setup.md).
 
 1. **Power the board** via micro-USB or a Waveshare Solar Power Manager board.
 2. The board opens a WiFi Access Point named after the board's MAC address, so it is
@@ -138,13 +138,13 @@ SPI SD-card module that runs at **3.3 V** (this one works well:
 
 1. **Find the SPI connector** on the board:
 
-   ![SPI Connector](https://gitlab.com/teleagriculture/community/-/raw/main/teleAgriCulture%20Board%20V2.1/Docu/pictures/SPI_CON.jpeg)
+   ![SPI Connector](Docu/pictures/SPI_CON.jpeg)
 
    _Picture by Daniel Fischer 2024_
 
 2. **Wire the SD-card module** to the SPI connector:
 
-   ![SD Card Reader Module](https://gitlab.com/teleagriculture/community/-/raw/main/teleAgriCulture%20Board%20V2.1/Docu/pictures/SD_CARD-Modul.jpeg)
+   ![SD Card Reader Module](Docu/pictures/SD_CARD-Modul.jpeg)
 
    _Picture by Daniel Fischer 2024_
 
@@ -309,7 +309,7 @@ configuration flags, power management and the build-flag matrix — see
 ### Contributing
 We'd love to hear about your experiences and projects with the board! For source-code
 details and contribution info, see [Docu/dev_docu.md](Docu/dev_docu.md#-contributing) or
-the online [Docu Page](https://gitlab.com/teleagriculture/community/-/tree/main/teleAgriCulture%20Board%20V2.1/Docu).
+the online [Docu Page](Docu).
 
 ---
 
