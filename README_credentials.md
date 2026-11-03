@@ -56,6 +56,20 @@ manual edits there if you also use the script.
 > plus how to open the PlatformIO terminal on Mac/Windows, in
 > [`README_flashing.md`](README_flashing.md).
 
+### Without the CSV — a flashing token from the web app
+
+An admin can create a flashing token in the web app's admin panel
+(Kits → tick the boards → Create flashing token). The script then fetches each
+board's credentials from the app instead of `Boards_List.csv`, and the app
+records the flash:
+
+```powershell
+$env:TAC_FLASH_TOKEN="tacf_..."          # env var only, keeps it out of shell history
+python flash_board.py 1014 --source api --api-url https://<app host>
+```
+
+A token only works for the boards it was made for, and expires after a few hours.
+
 ---
 
 ## Release firmware (credential-free, one binary per region)
