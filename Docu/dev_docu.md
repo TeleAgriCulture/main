@@ -454,7 +454,7 @@ The loop() function processes:
 ### Build-Time Configuration Flags (platformio.ini)
 | Flag | Purpose | Default | Options |
 |------|---------|---------|---------|
-| `TAC_VERSION` | Firmware version string | `"1.93"` | String |
+| `TAC_VERSION` | Firmware version string | `"1.96"` | String |
 | `TAC_LOG_LEVEL` | Debug verbosity for TAC libraries | `3` | 0-5 |
 | `DEBUG_PRINT` | Master debug output control | `false` | true/false |
 | `ARDUINO_USB_MODE` | USB interface mode | `1` | CDC enabled |
@@ -490,8 +490,8 @@ The loop() function processes:
 ### Installation Steps
 ```bash
 # Clone repository
-git clone https://github.com/artdanion/teleagriculture_board_V2.1.git
-cd teleagriculture_board_V2.1
+git clone https://github.com/TeleAgriCulture/main.git
+cd main
 
 # Install PlatformIO
 pip install platformio

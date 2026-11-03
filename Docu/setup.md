@@ -35,7 +35,7 @@ Now you can change your board settings (WiFi Network, Upload, Sensors, Timezone.
 If you use the Update Option:
 
 >find the current compiled firmware for OTA upload (Board Setup on the Config Portal) here:
->[current Firmware](../Firmware) (current version 1.93)
+>[current Firmware](../Firmware) (current version 1.96)
 >
 >**If you are using LORA please choose the right Firmware for your location / lora module**
 >and you have to enter your credentials for LoRa on the Config Portal
