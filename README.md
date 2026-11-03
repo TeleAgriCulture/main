@@ -164,7 +164,7 @@ SPI SD-card module that runs at **3.3 V** (this one works well:
 
 Pre-compiled firmware for **over-the-air (OTA) updates** — uploaded via *Board Setup*
 on the Config Portal — lives in the [`Firmware/`](Firmware) folder
-(current version **v1.93**).
+(current version **v1.96**).
 
 > **If you use LoRa, pick the firmware that matches your region / LoRa module.**
 > Each region has its own binary (`firmware_<region>_v<version>.bin`), because the
