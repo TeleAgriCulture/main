@@ -8,7 +8,7 @@ Switch board into Config Mode (new boards start into config mode)
 
 - to enter the Config Mode later (with open Config Portal):
 - - press BOOT BUTTON > 5 sec or 
-- - Doueble Reset the board (reset, 1, 2, 3, reset again)
+- - Double Reset the board (reset, 1, 2, 3, reset again)
 
 <img src="pictures/board_config.jpg" alt="Board Config Mode" width="400" height="400">
 
@@ -40,22 +40,56 @@ If you use the Update Option:
 >**If you are using LORA please choose the right Firmware for your location / lora module**
 >and you have to enter your credentials for LoRa on the Config Portal
 
-## Connect your data to the TeleAgriCulture Kits page
+## Connect your board to kits.teleagriculture.org
 
-<img src="pictures/teleagriculture_kits_page.jpg" alt="TeleAgriCulture Kits Page" width="400" height="400">
+### 1. Make an account
 
-- first you need an account on the TeleAgiCulture page. Talk to our admin.
-- log in to kits.teleagriculture.org
-- click on your kit
-- click on configure (Top Right)
-- add Sensors, dont change the API-key or Kit-ID (we are sending data verified by this numbers)
-- save your settings
+Sign up at [kits.teleagriculture.org/register](https://kits.teleagriculture.org/register).
 
-**we dont send Sensor or data names. (names use a lot of bytes via Lora transmission)**
-**So your Sensor names have to match whats shown on your board (e.g.: temp, temp1, temp2... hum, hum1, ...)**
+### 2. Get your kit on your account
 
->**for more info about the source code and if you would like to contribute in the coding goto:**  [Docu Page](README.md)
-there is also a section about integrated sensors.
+You can't create a kit yourself. If your kit came from the shop or a workshop, it is already on your account. Otherwise, ask an admin or the kit's owner to add you.
+
+Your kits are listed under **My Kits** once you log in.
+
+### 3. Give the board its Kit ID and API key
+
+Skip this step if your board was set up for you. Boards from the shop and from workshops already have both.
+
+Open your kit, then **More** → **Configure**:
+
+- the **Kit ID** is at the top, under Configuration
+- the **API key** is under API Security (only owners see it)
+
+On the board's Config Portal, open **Board Setup** and enter them as **Board ID** and **API KEY**. If your board uses LoRa, enter its LoRa keys there too; an admin can give you those.
+
+Don't refresh the API key on the website unless you mean to. The board stops reporting until you enter the new key on it.
+
+### 4. Wait for the first readings
+
+The board sends its readings on the Upload Interval set in Board Setup. At the usual 60 minutes, it sends on the hour.
+
+### 5. Add your sensors
+
+The board sends each reading under a short name, such as `temp`, `hum` or `mois`. A board with two of the same sensor adds a number: `temp1`, `temp2`. The website only records a reading if the kit has a sensor with exactly that name.
+
+Kits from the shop come with their sensors already added. Do this step for a board you set up yourself, or when you plug in a new sensor.
+
+You don't need to know the names. Once readings arrive, open **More** → **Configure**. Under **Readings not set up** you'll see every name your board sends:
+
+<img src="pictures/kits_page_add_sensors.jpg" alt="Readings not set up, listing hum, mois, temp, press and Battery, each with Add as sensor and Ignore buttons" width="390">
+
+- press **Add as sensor** for each reading you want to keep
+- press **Ignore** for one you don't want, such as `Battery` on a board without a battery
+- press **Save Sensors**
+
+Readings are recorded from the next upload on.
+
+### 6. Finish your kit's details (optional)
+
+On the same page you can set where the kit is, what it is used for, and whether it shows publicly on the map.
+
+>**For more about the source code, or to help with the coding, see the** [Docu Page](README.md). It also has a section on the sensors the board supports.
 
 
 ## Implemented Sensors
