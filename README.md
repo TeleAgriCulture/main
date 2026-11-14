@@ -288,8 +288,10 @@ it once from the committed template.
 See **[README_credentials.md](README_credentials.md)** for the full workflow:
 - **Manual** — copy `board_credentials.template.h` → `board_credentials.h`, fill in
   your values, build. (No extra files needed.)
-- **Maintainer scripts** — `flash_board.py <KIT_ID>` flashes a specific board, and
-  `build_firmware.py` builds the credential-free release binaries (one per region).
+- **Maintainer scripts** — `flash_board.py <KIT_ID>` flashes a specific board, with
+  credentials from `Boards_List.csv` or from a flashing token made on the kits site
+  ([README_flashing.md](README_flashing.md)), and `build_firmware.py` builds the
+  credential-free release binaries (one per region).
 
 ### Known issue: `ModuleNotFoundError: No module named 'intelhex'`
 If the build fails with this error, install the missing module into PlatformIO's Python:
@@ -400,5 +402,6 @@ correct values — use the web wizard at `http://<board-ip>/calibrate`. Full pro
 Join the community at **https://www.teleagriculture.org** to share your projects and
 experiences.
 
-To push data to teleagriculture.org you need a **board ID and API token**. See the
+To send readings to [kits.teleagriculture.org](https://kits.teleagriculture.org) you need
+a **kit ID and API key**, which the kit's owner finds on the kits site. See the
 [API documentation](Docu/API.md) for how to send readings and read your data back out.
