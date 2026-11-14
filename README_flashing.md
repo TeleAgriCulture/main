@@ -1,18 +1,24 @@
 # Flashing Boards by Kit ID — `flash_board.py`
 
-> ## ⚠️ MAINTAINERS ONLY — needs `Boards_List.csv`
+> ## ⚠️ MAINTAINERS ONLY: needs a board's credentials
 >
-> This guide is **only** for developers who have the (non-public) **`Boards_List.csv`**
-> in the project root. The CSV holds every board's API key and LoRaWAN OTAA keys,
-> so it is intentionally git-ignored and not shared publicly.
+> `flash_board.py` needs one of two things:
 >
-> **External developers without the CSV:** you cannot use `flash_board.py`. Follow
-> the **manual** path in [`README_credentials.md`](README_credentials.md) instead
-> (copy the template, fill in your own values, `pio run -e EU -t upload`).
+> - the non-public **`Boards_List.csv`** in the project root. It holds every board's
+>   API key and LoRaWAN OTAA keys, so it is git-ignored and never shared publicly.
+>   Admins download it from the kits site's admin panel (Kits, tick the boards,
+>   download);
+> - or a **flashing token** from the kits site's admin panel, which fetches the
+>   credentials for the boards it was made for (see
+>   [Without the CSV](#without-the-csv-a-flashing-token)).
+>
+> **External developers with neither:** follow the **manual** path in
+> [`README_credentials.md`](README_credentials.md) instead (copy the template, fill
+> in your own values, `pio run -e EU -t upload`).
 
-`flash_board.py` looks up a Kit ID in `Boards_List.csv`, fills
-`include/board_credentials.h` with that board's credentials, picks the right LoRa
-region, then builds and uploads — all in one command.
+`flash_board.py` looks up a Kit ID in `Boards_List.csv` (or asks the kits site),
+fills `include/board_credentials.h` with that board's credentials, picks the right
+LoRa region, then builds and uploads, all in one command.
 
 ---
 
@@ -64,6 +70,34 @@ python flash_board.py 1014 --dry-run       # show the plan, change nothing
 
 The script rewrites `include/board_credentials.h` on every run, so **don't keep
 manual edits there** if you also use the script.
+
+### Without the CSV: a flashing token
+
+An admin creates a token in the kits site's admin panel (Kits, tick the boards,
+**Create flashing token**). It is shown once, works only for those boards, and
+expires after a few hours (8 by default). Put it in an environment variable, never
+on the command line, so it stays out of your shell history:
+
+```powershell
+# Windows (PowerShell)
+$env:TAC_FLASH_TOKEN="tacf_..."
+python flash_board.py 1014 --source api --api-url https://kits.teleagriculture.org
+```
+
+```bash
+# Mac (zsh)
+export TAC_FLASH_TOKEN="tacf_..."
+python3 flash_board.py 1014 --source api --api-url https://kits.teleagriculture.org
+```
+
+Set `TAC_API_URL` to skip `--api-url`. Every other option above works the same.
+After a successful upload the script tells the kits site the board was flashed,
+with the region it built, whether you used `--erase`, and the firmware commit. The
+admin panel then shows when each board was last flashed. If that report fails, the
+script prints a warning; the board is still flashed.
+
+The script refuses a plain `http://` address (except a local test server), because
+anyone on the network could read the token.
 
 ### Picking the serial port
 
